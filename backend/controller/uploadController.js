@@ -12,6 +12,7 @@ export const uploadController=async (req,res)=>{
         }
         const file= await fileModel.create(fileObject);
         console.log(file);
+        console.log("File received:", req.file);
         return res.status(200).json({path:`${backendUrl}/files/${file._id}`})
     } catch (error) {
         return res.stauts(500).json({message:error.message});
