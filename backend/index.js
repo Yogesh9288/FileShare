@@ -14,7 +14,7 @@ app.use(cors());
 app.use(express.json());
 
 // API routes
-app.use("/api", router);
+app.use("/", router);
 
 // Static frontend
 const __dirname = path.resolve();
