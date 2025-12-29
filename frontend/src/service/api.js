@@ -1,8 +1,7 @@
-import dotenv from 'dotenv';
 export const uploadFile=async (fileData)=>{
     try {
         dotenv.config();
-        const backendUrl=process.env.VITE_BACKEND_URL;
+         const backendUrl = import.meta.env.VITE_BACKEND_URL;
         const response=await fetch(`${backendUrl}/upload`,{
             method:"POST",
             body:fileData
